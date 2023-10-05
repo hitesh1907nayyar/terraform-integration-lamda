@@ -6,6 +6,6 @@ module "my_lambda" {
   function_name    = var.function_name
   handler          = var.handler
   runtime          = var.runtime
-  filename = "/module/lamda/lamda_function/main.zip"
+  filename = "module/lamda/lamda_function/main.zip"
   iam_role_name    = var.iam_role_name
 }
