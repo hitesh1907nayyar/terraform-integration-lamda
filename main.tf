@@ -7,6 +7,6 @@ module "my_lambda" {
   handler          = "main.lambda_handler"
   runtime          = "python3.8"
   # filename         = "./module/lambda/lamda_function/main.zip"
-  filename = "/home/neetesh/aws_poc/terraform_A/module/lamda/lamda_function/main.zip"
+  filename = "/module/lamda/lamda_function/main.zip"
   iam_role_name    = "my-lambda-role"
 }
