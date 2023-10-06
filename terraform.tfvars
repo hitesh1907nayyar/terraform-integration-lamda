@@ -1,5 +1,5 @@
 aws_region     = "ap-south-1"    
-function_name    = "my-lambda-function"
+function_name    = "my-lambda-function-dev"
 handler          = "main.lambda_handler"
 runtime          = "python3.8"
 # filename         = "./module/lambda/lambda_function/main.zip"

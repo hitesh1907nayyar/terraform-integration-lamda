@@ -12,24 +12,25 @@ phases:
 
   pre_build:
     commands:
-      - echo "Executing pre-build commands"
+      - echo "Pre Build Completed"
+
       # Optionally, you can configure AWS CLI here if needed.
 
   build:
     commands:
-      - echo "Executing build commands"
+      - echo "Infra Build"
       - ls
-      - zip -r main.zip main.py
-      - aws s3 cp main.zip s3://awss3bucketuploadartifact/
       - terraform init
       - terraform validate
       - terraform plan -out=tfplan
-      # Optionally, you can add more Terraform commands like `terraform apply` here.
+      - echo "Application Build"
+      - terraform apply -auto-approve
 
   post_build:
     commands:
       - echo "Executing post-build commands"
-      - terraform apply -auto-approve
+      - zip -r main.zip main.py
+      - aws s3 cp main.zip s3://awss3bucketuploadartifact/
       # You can add additional post-build steps or notifications here.
 # artifacts:
 #   files:
