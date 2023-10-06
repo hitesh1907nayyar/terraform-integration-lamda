@@ -1,3 +1,10 @@
+terraform {
+  backend "s3" {
+    bucket         = "neeteshterraformtfstatemanagebucket"
+    key            = "terraform.tfstate"
+    region         = "ap-south-1"
+  }
+}
 provider "aws" {
   region = var.aws_region
 }
@@ -6,7 +13,7 @@ module "my_lambda" {
   function_name    = var.function_name
   handler          = var.handler
   runtime          = var.runtime
-  filename = "/module/lamda/lamda_function/main.zip"
+  filename = "module/lamda/lamda_function/main.zip"
   iam_role_name    = var.iam_role_name
   lambda_policy = var.lambda_policy
 }
