@@ -22,3 +22,7 @@ variable "iam_role_name" {
   description = "ima role"
   
 }
+variable "lambda_policy" {
+  description = "Lamda Policy"
+  
+}

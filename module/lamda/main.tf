@@ -16,7 +16,7 @@ resource "aws_iam_role" "lambda_execution_role" {
 }
 
 resource "aws_iam_policy_attachment" "lambda_policy" {
-  name       = "lambda_policy"
+  name       = var.lambda_policy
   policy_arn = aws_iam_policy.lambda_policy.arn
   roles      = [aws_iam_role.lambda_execution_role.name]
 }

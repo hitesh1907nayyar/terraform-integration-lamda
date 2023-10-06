@@ -17,3 +17,8 @@ variable "filename" {
 variable "iam_role_name" {
   description = "Name of the IAM role for Lambda execution"
 }
+
+variable "lambda_policy" {
+  description = "Name of policy"
+  
+}

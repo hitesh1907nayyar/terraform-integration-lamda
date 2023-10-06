@@ -8,4 +8,5 @@ module "my_lambda" {
   runtime          = var.runtime
   filename = "/module/lamda/lamda_function/main.zip"
   iam_role_name    = var.iam_role_name
+  lambda_policy = var.lambda_policy
 }
