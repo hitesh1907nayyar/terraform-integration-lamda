@@ -14,10 +14,10 @@ variable "runtime" {
   description = "Runtime"
 }
 
-variable "filename" {
-  description = "filename"
+# variable "filename" {
+#   description = "filename"
   
-}
+# }
 variable "iam_role_name" {
   description = "ima role"
   
@@ -25,4 +25,12 @@ variable "iam_role_name" {
 variable "lambda_policy" {
   description = "Lamda Policy"
   
+}
+variable "lambda_code_bucket" {
+  description = "Name of lamda Bucket"
+
+}
+variable "lambda_code_key" {
+  description = "Name of Lamda Code Key"
+
 }

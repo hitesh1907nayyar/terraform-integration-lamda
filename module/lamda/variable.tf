@@ -10,9 +10,9 @@ variable "runtime" {
   description = "Lambda function runtime"
 }
 
-variable "filename" {
-  description = "Path to the Lambda function code package (ZIP or folder)"
-}
+# variable "filename" {
+#   description = "Path to the Lambda function code package (ZIP or folder)"
+# }
 
 variable "iam_role_name" {
   description = "Name of the IAM role for Lambda execution"
@@ -21,4 +21,12 @@ variable "iam_role_name" {
 variable "lambda_policy" {
   description = "Name of policy"
   
+}
+variable "lambda_code_bucket" {
+  description = "Name of lamda Bucket"
+
+}
+variable "lambda_code_key" {
+  description = "Name of Lamda Code Key"
+
 }

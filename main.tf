@@ -13,7 +13,10 @@ module "my_lambda" {
   function_name    = var.function_name
   handler          = var.handler
   runtime          = var.runtime
-  filename = "module/lamda/lamda_function/main.zip"
+  # filename = "module/lamda/lamda_function/main.zip"
   iam_role_name    = var.iam_role_name
   lambda_policy = var.lambda_policy
+  lambda_code_bucket = var.lambda_code_bucket
+  lambda_code_key = var.lambda_code_key
 }
+
