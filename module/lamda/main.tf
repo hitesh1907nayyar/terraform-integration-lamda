@@ -22,7 +22,7 @@ resource "aws_iam_policy_attachment" "lambda_policy" {
 }
 
 resource "aws_iam_policy" "lambda_policy" {
-  name        = "lambda_policy"
+  name        = var.lambda_policy
   description = "Allow Lambda to access necessary resources"
 
   policy = jsonencode({
