@@ -42,9 +42,7 @@ resource "aws_lambda_function" "example_lambda" {
   function_name = var.function_name
   handler      = var.handler
   runtime      = var.runtime
-  # filename     = var.filename
   role         = aws_iam_role.lambda_execution_role.arn # Assign the IAM role here
   s3_bucket = var.lambda_code_bucket
   s3_key = var.lambda_code_key
-  # source_code_hash = filebase64sha256(var.lambda_code_key)
 }
