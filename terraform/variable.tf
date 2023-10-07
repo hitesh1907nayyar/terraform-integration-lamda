@@ -1,9 +1,3 @@
-# my-outer-module/variables.tf
-variable "aws_tfstate_bucket" {
-  description = "AWS Tfstate file Manage"
-  
-}
-
 variable "aws_region" {
   description = "The AWS region where resources will be created"
 }
