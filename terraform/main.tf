@@ -9,7 +9,7 @@ provider "aws" {
   region = var.aws_region
 }
 module "my_lambda" {
-  source           = var.aws_module_source_lamda # Path to the Lambda module directory
+  source           = "./module/lamda" # Path to the Lambda module directory
   function_name    = var.function_name
   handler          = var.handler
   runtime          = var.runtime

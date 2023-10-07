@@ -8,11 +8,6 @@ variable "aws_tfstate_filename" {
   
 }
 
-variable "aws_module_source_lamda" {
-  description = "AWS Lamda Module Resource"
-  default     = "./module/lamda"
-  
-}
 variable "aws_region" {
   description = "The AWS region where resources will be created"
 }
