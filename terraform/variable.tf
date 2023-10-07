@@ -17,6 +17,7 @@ variable "handler" {
 variable "runtime" {
   description = "Runtime"
 }
+
 variable "iam_role_name" {
   description = "ima role"
   
@@ -33,5 +34,3 @@ variable "lambda_code_key" {
   description = "Name of Lamda Code Key"
 
 }
-
-

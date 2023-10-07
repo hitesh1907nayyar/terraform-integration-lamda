@@ -1,15 +1,15 @@
 terraform {
   backend "s3" {
-    bucket         = var.aws_tfstate_bucket
+    bucket         = "neeteshterraformtfstatemanagebucket"
     key            = "terraform.tfstate"
-    region         = var.aws_region
+    region         = "ap-south-1"
   }
 }
 provider "aws" {
   region = var.aws_region
 }
 module "my_lambda" {
-  source           = "./module/lamda" # Path to the Lambda module directory
+  source           = "./module/lamda"  # Path to the Lambda module directory
   function_name    = var.function_name
   handler          = var.handler
   runtime          = var.runtime

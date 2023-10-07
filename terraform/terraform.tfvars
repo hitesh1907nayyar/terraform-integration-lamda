@@ -7,5 +7,4 @@ iam_role_name    = "my-lambda-role-test"
 lambda_policy = "my-lamda-policy-test"
 lambda_code_bucket = "awss3bucketuploadartifact"
 lambda_code_key = "main.zip"
-aws_tfstate_bucket = "neeteshterraformtfstatemanagebucket"
-aws_tfstate_filename = "terraform.tfstate"
+
