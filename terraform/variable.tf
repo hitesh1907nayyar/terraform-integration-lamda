@@ -28,3 +28,7 @@ variable "lambda_code_key" {
   description = "Name of Lamda Code Key"
 
 }
+variable "s3_bucket_name" {
+  description = "Give s3 bucket Name"
+  
+}
