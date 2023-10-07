@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "neeteshterraformtfstatemanagebucket"
+    bucket         = "neeteshterraformtfstatemanagebucket-test"
     key            = "terraform.tfstate"
-    region         = "ap-south-1"
+    region         = "us-east-1"
   }
 }
 provider "aws" {
