@@ -1,4 +1,4 @@
-aws_region     = "ap-south-1"    
+aws_region     = "us-east-1"    
 function_name    = "my-lambda-function-dev"
 handler          = "main.lambda_handler"
 runtime          = "python3.8"
