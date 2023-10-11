@@ -1,0 +1,32 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - apt-get update
+      - apt-get install -y unzip
+      - curl -fsSL https://releases.hashicorp.com/terraform/$(curl -fsSL https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M .current_version)/terraform_$(curl -fsSL https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M .current_version)_linux_amd64.zip -o terraform.zip
+      - unzip terraform.zip -d /usr/local/bin/
+
+  pre_build:
+    commands:
+      - echo "Executing pre-build commands for dev"
+      - cd python-app
+      - zip -r main.zip main.py
+      - aws s3 cp main.zip s3://awss3bucketuploadartifact/dev/
+      - cd ..
+
+  build:
+    commands:
+      - echo "Executing build commands for dev"
+      - cd terraform
+      - terraform init
+      - terraform validate
+      - terraform plan -out=tfplan-dev
+      # Optionally, you can add more Terraform commands like `terraform apply` here.
+
+  post_build:
+    commands:
+      - echo "Executing post-build commands for dev"
+      - terraform apply -var-file=terraform.tfvars-dev -auto-approve
