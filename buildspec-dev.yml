@@ -14,7 +14,7 @@ phases:
       - echo "Executing pre-build commands for dev"
       - cd python-app
       - zip -r main.zip main.py
-      - aws s3 cp main.zip s3://amdadevzipcode/
+      - aws s3 cp main.zip s3://lamdadevzipcode/
       - cd ..
 
   build:
