@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "neeteshterraformtfstatemanagebucket"
+    bucket         = "devopsofworldbucketterraformstatedev"
     key            = "terraform.tfstate"
     region         = "ap-south-1"
   }
