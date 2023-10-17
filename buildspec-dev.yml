@@ -29,4 +29,4 @@ phases:
   post_build:
     commands:
       - echo "Executing post-build commands for dev"
-      - terraform destroy -var-file=terraform.tfvars-dev -auto-approve
+      - terraform apply -var-file=terraform.tfvars-dev -auto-approve
